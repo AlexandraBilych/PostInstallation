@@ -1,21 +1,44 @@
 #!/bin/bash
 
-#add repositories
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
+apt update
+apt-get dist-upgrade
 
-#install skypeforlinux
-curl https://repo.skype.com/data/SKYPE-GPG-KEY | sudo apt-key add -
-sudo apt -y update
-sudo apt install apt-transport-https -y
-sudo tee /etc/apt/sources.list.d/skypeforlinux.list
+#add repositories
+apt install curl
+curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
 
 # basic update
-sudo apt-get -y update
-sudo apt-get -y upgrade
+apt-get -y update
+apt-get -y upgrade
 
 #install apps
-sudo apt install \
+apt install \
+dirmngr \
+gnupg \
+gnupg \
+ca-certificates \
 apt-transport-https\
-sublime-text-installer \
-skypeforlinux
+software-properties-common \
+sublime-text \
+vlc \
+ubuntu-restricted-extras \
+gnome-tweaks \
+chrome-gnome-shell \
+rar \
+unrar \
+p7zip-full \
+p7zip-rar\
+wine \
+winetricks \
+laptop-mode-tools \
+openjdk-11-jdk
 
+#install pycharm
+snap install pycharm-community --classic
+
+#install visual code
+snap install --classic code
+
+#install skype
+snap install skype --classic
