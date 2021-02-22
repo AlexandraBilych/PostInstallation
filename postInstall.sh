@@ -18,7 +18,7 @@ dirmngr \
 gnupg \
 gnupg \
 ca-certificates \
-apt-transport-https\
+apt-transport-https \
 software-properties-common \
 sublime-text \
 vlc \
@@ -28,7 +28,7 @@ chrome-gnome-shell \
 rar \
 unrar \
 p7zip-full \
-p7zip-rar\
+p7zip-rar \
 wine \
 winetricks \
 laptop-mode-tools \
